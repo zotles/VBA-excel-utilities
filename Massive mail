@@ -1,3 +1,5 @@
+'For me this is the simplest way to code a massive mail in VBA.
+
 Sub MassiveMail()
 
 Dim outlook As outlook.Application
