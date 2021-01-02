@@ -1,2 +1,2 @@
 # VBA-excel-utilities
-Fell free to review and re-code.
+Feel free to review and re-code.
