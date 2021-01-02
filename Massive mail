@@ -1,0 +1,26 @@
+Sub MassiveMail()
+
+Dim outlook As outlook.Application
+Dim MItem As outlook.MailItem
+
+Set outlookapp = New outlook.Application
+
+'Mails are in range("D2:D8)
+
+    For Each celda In Range("D2:D8")
+    
+        Asunto = "Asunto de prueba"
+        Nombre = celda.Offset(0, -3).Value
+        Correo = celda.Value
+        Mensaje = "body of the message"
+        
+        Set MItem = outlookapp.CreateItem(olMailItem)
+        
+        With MItem
+            .To = Correo
+            .Subject = Asunto
+            .Body = Mensaje
+            .Send
+        End With
+    Next
+End Sub
